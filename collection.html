@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="collection.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="nav-bar">
+      <ul class="nav-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="submit.html">Submit</a></li>
+        <li><a href="collection.html">Collection</a></li>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </div>
+
+    <!-- <ul class="tabs">
+      <a src="tabf0-1" class="active">Tab 1</a>
+      <a src="tabf0-2">Tab 2</a>
+      <a src="tabf0-3">Tab 3</a>
+    </ul> -->
+
+    <div class="main-container"></div>
+  </body>
+  <script>
+    const articleOne = `<div class="title1">OCADU students respond to Mindful Campus posters</div>
+      <div class="sub-text1">Article by Omama Mahmood</div>
+      <div class="images1">
+        <img src="pics/poster1.jpeg" />
+        <img src="pics/poster2.jpeg" />
+        <img src="pics/posters3.jpeg" />
+        <div class="body-text1">
+          <p>
+            Early this year, the OCADU campus was adorned with brightly coloured
+            posters that featured a doodled character and a snappy headline
+            challenging students to work their minds like they work their
+            <em>insert program sensitive tool.</em> OCADU was given a 4 million
+            dollar grant by the
+            <a href="https://www.canada.ca/en/public-health.html"
+              >Public Health Agency of Canada</a
+            >
+            aimed at mental health promotion for post-secondary students
+            impacted by the pandemic. They plan to do this by offering video
+            lessons teaching students about mindfulness and how to practice it,
+            In-person and virtual group classes (not mentioned for what exactly)
+            and a few other voluntary activities aimed at enhancing individuals'
+            well-being.
+          </p>
+          <p>
+            This poster campaign was met with mixed reviews which were clear
+            from the vandalization of some found around the main campus
+            building. I spoke with Aysia, a 3rd-year cross-disciplinary artist
+            who took the initiative and put up posters asking students to scan
+            the displayed QR code and voice their anonymous opinions through a
+            google forums sheet. With her permission and the permission of her
+            group members who also worked on this project, have made the
+            responses publically available. Below are all of the responses that
+            Aysia and her team have gotten about the 'mindful campus' posters.
+          </p>
+        </div>
+      </div>`;
+    const articleTwo = `<div class="title1">OCADU students respond to Mindful Campus posters</div>
+      <div class="sub-text1">Article by Omama Mahmood</div>
+      <div class="images1">
+        <img src="pics/poster1.jpeg" />
+        <img src="pics/poster2.jpeg" />
+        <img src="pics/posters3.jpeg" />
+        <div class="body-text1">
+          <p>
+            Early this year, the OCADU campus was adorned with brightly coloured
+            posters that featured a doodled character and a snappy headline
+            challenging students to work their minds like they work their
+            <em>insert program sensitive tool.</em> OCADU was given a 4 million
+            dollar grant by the
+            <a href="https://www.canada.ca/en/public-health.html"
+              >Public Health Agency of Canada</a
+            >
+            aimed at mental health promotion for post-secondary students
+            impacted by the pandemic. They plan to do this by offering video
+            lessons teaching students about mindfulness and how to practice it,
+            In-person and virtual group classes (not mentioned for what exactly)
+            and a few other voluntary activities aimed at enhancing individuals'
+            well-being.
+          </p>
+          <p>
+            This poster campaign was met with mixed reviews which were clear
+            from the vandalization of some found around the main campus
+            building. I spoke with Aysia, a 3rd-year cross-disciplinary artist
+            who took the initiative and put up posters asking students to scan
+            the displayed QR code and voice their anonymous opinions through a
+            google forums sheet. With her permission and the permission of her
+            group members who also worked on this project, have made the
+            responses publically available. Below are all of the responses that
+            Aysia and her team have gotten about the 'mindful campus' posters.
+          </p>
+        </div>
+      </div>`;
+    const articles = [
+      articleOne,
+      articleTwo,
+      articleTwo,
+      articleTwo,
+      articleTwo,
+    ];
+
+    function toggleDrawer(id) {
+      const val = 88 + id * 2;
+      const article = document.querySelector(`#article${id}`);
+      if (article.classList.contains(".closed")) {
+        article.classList.remove(".closed");
+        article.style.left = `0`;
+      } else {
+        article.classList.add(".closed");
+        article.style.left = `${val}vw`;
+      }
+    }
+
+    for (let i = 0; i < articles.length; i++) {
+      const colors = ["#fe9687", "#ffe587", "#82b4fe", "#a1db73", "#f0afe9"];
+      document.querySelector(
+        ".main-container"
+      ).innerHTML += `<div style="background-color: ${colors[i]}" class="container" id="article${i}" onclick="toggleDrawer(${i})">${articles[i]}</div>`;
+    }
+  </script>
+</html>

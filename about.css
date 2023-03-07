@@ -1,0 +1,101 @@
+@font-face {
+  font-family: "sligoli";
+  src: url(fonts/Sligoil-Micro.otf);
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #f9f2e6;
+  margin: 0px;
+  padding-left: 0px;
+}
+p {
+  padding: 2%;
+  position: relative;
+  top: 100px;
+  text-align: center;
+  font-family: sligoli;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 47px;
+  line-height: 55px;
+  letter-spacing: -2px;
+  color: #c6007a;
+}
+.spin-on-hover {
+  position: relative;
+  width: 40px;
+  top: 10px;
+  transition: transform 0.9s ease;
+}
+
+.spin-on-hover:hover {
+  transform: rotate(360deg);
+}
+
+.nav-bar {
+  box-sizing: border-box;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: inline-block;
+  background: #f9f2e6;
+  border-top: 3px solid #0008c6;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: right;
+  width: 10em;
+  text-align: center;
+  display: flex;
+  align-items: flex-end;
+}
+
+.nav-links {
+  list-style: none;
+  text-align: center;
+}
+.nav-links li {
+  display: inline-block;
+  padding: 0;
+  margin: 1em 0;
+}
+.nav-links li a {
+  padding: 0;
+  margin: 0;
+  font-family: "Sligoil";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  width: 350px;
+  height: 78px;
+  /* left: 561px;
+  top: 924px; */
+  text-align: center;
+  padding-right: 3em;
+  margin: 1em 0;
+  padding-left: 1.2em;
+  /* display: flex;
+  align-items: flex-end; */
+}
+a:link {
+  color: #0008c6;
+  text-decoration: none;
+}
+a:visited {
+  color: #0008c6;
+  text-decoration: none;
+}
+a:hover {
+  color: #0008c6;
+  text-decoration: #f3c635 wavy underline;
+}
+a:active {
+  color: #0008c6;
+  text-decoration: none;
+}
+.nav-links li a:hover {
+  color: #c83636;
+}
