@@ -99,11 +99,17 @@ ul.tabs a {
   rotate: -90deg;
 } */
 
+.cite {
+  font-style: italic;
+}
+
 .closed {
   background-color: #000000;
 }
 
 .title1 {
+  padding-top: 3%;
+
   font-family: "Sligoil";
 
   font-style: normal;
