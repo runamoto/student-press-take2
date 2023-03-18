@@ -12,41 +12,23 @@ body {
   background-color: #f9f2e6;
   /* overflow-x: hidden; */
 }
+/* nav bar */
 .nav-bar {
-  box-sizing: border-box;
   position: fixed;
   bottom: 0;
-  height: 100%;
-  display: block;
+  width: 100%;
   background: #f9f2e6;
-  border-right: 3px solid #0008c6;
+  border-top: 3px solid #0008c6;
+  display: flex;
+  justify-content: space-around;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+.nav-bar ul {
   margin: 0;
-  width: 21em;
-  text-align: left;
-  display: block;
-}
-
-.nav-links {
-  list-style: none;
-  text-align: left;
-}
-.nav-links li {
-  display: inline-block;
-  padding: 0;
-  margin: 10px 0;
-  padding: 20px;
-}
-.nav-links li a {
-  padding: 0;
-  margin: 0;
-  font-family: "Sligoil";
+  font-family: "sligoli";
   font-style: normal;
   font-weight: 400;
   font-size: 48px;
+  padding: 25px;
 }
 a:link {
   color: #0008c6;
@@ -64,9 +46,11 @@ a:active {
   color: #0008c6;
   text-decoration: none;
 }
-.nav-links li a:hover {
+.nav-bar ul a:hover {
   color: #c83636;
 }
+
+/* nav bar */
 .stickers {
   width: 200px;
 }
